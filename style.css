@@ -1,0 +1,357 @@
+/*
+  ====================== Global ======================
+*/
+:root {
+  --white: #F0F2F5;
+  --lightGray: #f0f2f5;
+  --darkGreen: #2D4A22;
+  --lightText: #FFF;
+  --darkBlue: #363F5F;
+  --lightBlue: #969CB3;
+  --lightGreen: #3DD705;
+  --mediumGreen: #49AA26;
+  --incomeColor: #12A454;
+  --lightRed: #E92929;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Modificando o tamanho da tela */
+html {
+  font-size: 93.75%; /* 15px */
+}
+
+body {
+  background: var(--lightGray);
+  font-family: 'Poppins', sans-serif;
+}
+/* === Titles === */
+h2 {
+  margin-top: 3.2rem;
+  margin-bottom: 0.8rem;
+  color: var(--subTitles);
+  font-weight: 400;
+}
+
+/*
+  Escondendo o elemento mas deixando disponivel para os leitores de acessibilidade
+*/
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/** Links abd buttons **/
+a {
+  color: var(--mediumGreen);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--lightGreen);
+}
+
+button {
+  width: 100%;
+  height: 50px;
+
+  border: none;
+  border-radius: 0.25rem;
+
+  color: var(--lightText);
+  background: var(--mediumGreen);
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+button:hover {
+  background: var(--lightGreen);
+  transform: scale(1.1);
+}
+
+.button.new {
+  display: inline-block;
+  margin-bottom: .8rem;
+}
+
+.button.cancel{
+  width: 100%;
+  height: 50px;
+
+  color: var(--lightRed);
+  border: 1px solid var(--lightRed);
+  border-radius: 0.25rem;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: .2s;
+}
+
+.button.cancel:hover {
+  background: var(--lightRed);
+  color: var(--lightText);
+  opacity: 0.8;
+  border: none;
+  transform: scale(1.1);
+}
+
+
+/*
+  ====================== Header ======================
+*/
+header {
+  background-color: var(--darkGreen);
+  padding: 2rem 0 10rem;
+  text-align: center;
+  
+}
+
+header #logo {
+  color: var(--lightText);
+  font-weight: 100;
+}
+
+h2 {
+  color: var(--darkBlue);
+}
+/*
+  ====================== Main ======================
+*/
+.container {
+  /*Min ver qual o menor entre os 2 e sempre deixa o menor*/
+  width: min(90vw, 800px);
+  margin: auto;
+}
+
+/** === === Balance === === */
+#balance {
+  margin-top: -8rem;
+}
+
+#balance h2 {
+  color: var(--lightText);
+  margin-top: 0;
+}
+
+/** === CARDS === */
+
+
+.card {
+  background: var(--lightText);
+  padding: 1.5rem 2rem;
+  border-radius: 0.25rem;
+  /* width: 20rem; */
+  margin-bottom: 2rem;
+
+  color: var(--darkBlue);
+}
+
+.card h3 {
+  font-weight: normal;
+  font-size: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card p {
+  font-size: 2rem;
+  line-height: 3rem;
+  margin-top: 1rem;
+}
+
+.card.total {
+  background: var(--mediumGreen);
+  color: var(--lightText);
+}
+
+/** === === Transactions === === */
+/* Display: block aplicado na caixa pai da tabela para aplicar o overflow-x quando a tela for muito pequena*/
+.tableBox {
+  display: block;
+  overflow-x: auto;
+}
+#data-table {
+  width: 100%;
+  /* mexe nas bordas das tabelas */
+  border-spacing: 0 0.5rem;
+  color: var(--lightBlue);
+}
+
+table th {
+  background: var(--lightText);
+  font-weight: normal;
+  padding: 1rem 2rem;
+  text-align: left;
+}
+
+table thead th:first-child,
+table tbody td:first-child {
+  border-radius: .25rem 0 0 .25rem;
+}
+
+table thead th:last-child,
+table tbody td:last-child {
+  border-radius: 0 .25rem .25rem 0;
+}
+
+table td {
+  background: var(--lightText);
+  padding: 1rem 2rem;
+}
+
+table tbody tr{
+  opacity: 1;
+  transition: 0.2s;
+}
+
+table tbody tr:hover {
+  opacity: 0.7;
+}
+
+td.description {
+  color: var(--darkBlue);
+}
+
+td.income {
+  color: var(--incomeColor);
+
+}
+
+td.expense {
+  color: var(--lightRed);
+}
+
+/*
+  ====================== Modal ======================
+*/
+
+.modal-overlay {
+  width: 100%;
+  height: 100%;
+  
+  background: rgba(0, 0, 0, 0.7);
+
+  position: fixed;
+  top: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0; /* sumir modal da tela */
+  visibility: hidden; /* remove o espaço */
+
+  z-index: 999;
+}
+
+.modal-overlay.active {
+  opacity: 1; /* mostra modal da tela */
+  visibility: visible; /* ativa o espaço do modal*/
+}
+
+.modal {
+  background: var(--white);
+  padding: 2.4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.modal .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  padding: 0;
+  border: 0;
+
+  width: 90%;
+}
+
+/*
+  ====================== Form ======================
+*/
+.form {
+  max-width: 500px;
+}
+
+.form h2 {
+  margin-top: 0;
+}
+
+.form form .input-group {
+  margin-top: 0.8rem;
+}
+
+.form form .input-group input {
+  border: 0;
+  border-radius: 0.2rem;
+  
+  padding: 0.8rem;
+
+  width: 100%;
+}
+
+.form form .input-group small {
+  opacity: 0.4;
+}
+
+.form form .input-group.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form form .input-group.actions .button,
+.form form .input-group.actions button {
+  width: 48%;
+
+}
+
+
+/*
+  ====================== Footer ======================
+*/
+
+footer {
+  text-align: center;
+  padding: 4rem 0 2rem;
+  color: var(--darkBlue);
+  opacity: 0.6;
+  position: sticky;
+  
+  z-index: -1;
+}
+
+
+/*================== RESPONSIVIDADE ======================*/
+
+/*quando o minimo de largura for 800px*/
+@media (min-width: 800px) {
+  hhtml {
+    font-size: 87.5%;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+}
