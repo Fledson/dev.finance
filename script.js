@@ -125,7 +125,7 @@ const DOM = {
 const Utils = {
   formatAmount(value) {
     //=> pegando o valor e multiplicando por 100
-    value = (Number(value) * 100).toFixed(2)
+    value = (Number(value) * 100)
     // tratamento via expressão regular
     // value = Number(value.replace(/\,\./g,"")) * 100
     return value
