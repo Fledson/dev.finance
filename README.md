@@ -1,7 +1,7 @@
 <h1 align="center">
   <img width='400' src='./assets/logo.svg'>
 </h1>
-<p align="center">🤑 uma plataforma para registro de movimentação financeira 🤑</p>
+<p align="center">🤑 a platform for recording financial transactions 🤑</p>
 
 <br>
 
@@ -15,15 +15,15 @@
   
   
   <h4 align="center"> 
-    🚧 🚀 Aplicação ainda em construção...  🚧
+    🚧 . . . 🚀 Under construction . . .  🚧
   </h4>
 
   <nav>
-    <a href="#about">Sobre</a> •
-    <a href="#functions">Funcionalidades</a> • 
-    <a href="#techs">Tecnologias</a> • 
-    <a href="#use">Como usar</a> • 
-    <a href="#dev">Autor</a>
+    <a href="#about">About</a> •
+    <a href="#functions">Functions</a> • 
+    <a href="#techs">Technologies</a> • 
+    <a href="#use">How to use</a> • 
+    <a href="#dev">Dev</a>
   </nav>
 
 </div>
@@ -36,13 +36,16 @@
   <p><img src="./images/mobile.png" height="600" alt="visualização mobile"></p>
 </div>
 
-<h2 id="about">👀 Sobre</h2>
-
+<h2 id="about">👀 About 💬</h2>
+<br>
 <p>
-  O dev.finance$ é uma plataforma para controle de gastos onde se pode realizar o acompanhamento dos valores de entradas e saidas (despesas ou receitas) de uma pessoa e mostrar o saldo final, comparando o total da soma dos 2 acompanhamentos para gerar um lucro real em cima de todos os gastos lançados.
+  dev.finance$ is a platform for controlling expenses where you can monitor a person's inflows and outflows (expenses or income) and show the final balance, comparing the sum total of the 2 follow-ups to generate a profit real on top of all posted expenses.
 </p>
 
-<h2 id="functions">🧾 Funcionalidades</h2>
+<br><br>
+
+<h2 id="functions">🧾 Functions </h2>
+<br>
   <div align="center">
     <p>📥 Lançamento de despesa e receita</p>
     <p>📇 Exclusão de despesa e receita</p>
@@ -50,51 +53,59 @@
     <p>📊 Resultado total de valores</p>
     <p>🗄 Armazenamento de dados no localStorage</p>
   </div>  
-<h2 id="techs">🖥 Tecnologias usadas</h2>
 
-  <p align="center">O projeto base foi construido com as tecnologias</p>
+<br><br>
+
+<h2 id="techs">🖥 Technologies used</h2>
+<br>
+  <p align="center">The base project was built with the technologies</p>
   
   <div align="center">
-    <span><img src="#" alt="html"> Html<span> •
-    <span><img src="#" alt="css"> Css<span> •
-    <span><img src="#" alt="javascript"> Javascript<span> •
+    <img src="./images/html.png" width="50" alt="html">
+    <img src="./images/css.png" width="50" alt="css">
+    <img src="./images/javascript.png" width="50" alt="javascript">
   </div>
 
-<h2 id="use">📚 COMO BAIXAR E RODAR O PROJETO :</h2>
+<br><br>
 
-<h3>Direto do github</h3>
+<h2 id="use">📚 Download and run the project:</h2>
+
+<br><br>
+
+<h3>Via github</h3>
 
 ```bash
-  #  Baixe o ZIP do projeto
-  $  Clique em Code e em Baixar ZIP
+  # Download the project ZIP
+  $ Click Code and Download ZIP
 
-  #  Escolha um local para salvar
+  # Choose a save location
   
-  #  Abra com seu editor de preferência
+  # Open with your preferred editor
 
-  #  Se usar o Vs Code pode usar a extensão Live server para rodar o projeto
-  #  Clica com o botão direito (dentro do vscode) no index.html e coloque em "Open with Live Server"
+  # If using Vs Code you can use the Live server extension to run the project
+  # Right click (inside vscode) on index.html and set to "Open with Live Server"
 
-  # 😀 Seja feliz 😀!!!
+  # 😀 Be happy 😀!!!
  ```
 
+<br><br>
 
-<h3>Usando o git bash</h3>
+<h3>Using git bash</h3>
 
 ```bash
-  #  Faça um clone do repositorio
-  $  git clone https://github.com/Fledson/dev.finance.git
+  # Make a clone of the repository
+  $ git clone https://github.com/Fledson/dev.finance.git
 
-  #  Abra o arquivo o diretorio (pelo VScode):
-  $  code .
+  # Open the file or directory (via VScode):
+  $ code .
 
-  #  Pode usar a extensão Live server para rodar o projeto
+  # Can use Live server extension to run the project
   
-  #  Clica com o botão direito (dentro do vscode) no index.html e coloque em "Open with Live Server"
+  # Right click (inside vscode) on index.html and set to "Open with Live Server"
 
-  # 😀 Seja feliz 😀!!!
+  # 😀 Be happy 😀!!!
  ```
 ---
 <p id="dev" align="center">
-  Desenvolvido por Fledson Henrique 🥷
+  Developed by Fledson Henrique 🥷
 </p>
